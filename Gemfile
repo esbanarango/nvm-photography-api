@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-ruby ENV['CUSTOM_RUBY_VERSION'] || '2.1.5'
+ruby ENV['CUSTOM_RUBY_VERSION'] || '2.2.1'
 gem 'rails', '4.2.1'
 gem 'spring',        group: :development
 gem 'responders', '~> 2.1.0'
@@ -22,11 +22,6 @@ group :production, :staging do
 end
 group :development, :staging do
   gem 'bullet'
-end
-group :development, :test do
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
 end
 group :development do
   gem 'better_errors'

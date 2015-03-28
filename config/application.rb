@@ -9,6 +9,20 @@ Bundler.require(*Rails.groups)
 module NvmPhotographyApi
   class Application < Rails::Application
 
+    config.api_only = true
+
+    if defined?(Dotenv)
+      Dotenv.load '.env'
+    end
+
+    # CORS. F CORS.
+    config.middleware.use Rack::Cors do
+      allow do
+        origins "*"
+        resource "*", headers: :any, methods: [:get, :post, :put, :delete, :options]
+      end
+    end
+
     config.generators do |g|
       g.test_framework :rspec,
         fixtures: true,
