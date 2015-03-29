@@ -1,0 +1,4 @@
+test:
+  adapter: postgresql
+  database: nvm_photography_api_test
+  username: postgres
