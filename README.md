@@ -1,6 +1,5 @@
 # nvm-photography-api
-[![Build Status](https://travis-ci.org/esbanarango/nvm-photography-api.svg?branch=master)](https://travis-ci.org/esbanarango/nvm-photography-api) [![Code Climate](https://codeclimate.com/github/esbanarango/nvm-photography-api/badges/gpa.svg)](https://codeclimate.com/github/esbanarango/nvm-photography-api) [![Code Climate](https://codeclimate.com/github/esbanarango/nvm-photography-api/badges/gpa.svg)](https://codeclimate.com/github/esbanarango/nvm-photography-api)
-
+[![Build Status](https://travis-ci.org/esbanarango/nvm-photography-api.svg?branch=master)](https://travis-ci.org/esbanarango/nvm-photography-api) [![Code Climate](https://codeclimate.com/github/esbanarango/nvm-photography-api/badges/gpa.svg)](https://codeclimate.com/github/esbanarango/nvm-photography-api) [![Test Coverage](https://codeclimate.com/github/esbanarango/nvm-photography-api/badges/coverage.svg)](https://codeclimate.com/github/esbanarango/nvm-photography-api)
 
 Problems? Issues?
 -----------
