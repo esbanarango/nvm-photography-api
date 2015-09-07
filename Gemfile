@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 ruby ENV['CUSTOM_RUBY_VERSION'] || '2.2.1'
-gem 'rails', '4.2.1'
+gem 'rails', '4.2.4'
 gem 'spring',        group: :development
 gem 'responders', '~> 2.1.0'
 gem 'devise'
