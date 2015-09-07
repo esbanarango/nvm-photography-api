@@ -9,4 +9,11 @@
 #
 
 class Camara < ActiveRecord::Base
+
+  # Validations
+  validates :model, presence: true, uniqueness: true
+
+  # Relations
+  has_many :photos
+
 end

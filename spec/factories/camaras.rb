@@ -1,6 +1,6 @@
 FactoryGirl.define do
   factory :camara do
-    model "MyString"
+    model { generate(:unique_name) }
   end
 
 end
