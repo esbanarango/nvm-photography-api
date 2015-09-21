@@ -1,0 +1,39 @@
+{
+  "type": "object",
+  "required": ["photo"],
+  "properties": {
+    "photo": {
+      "type" : "object",
+      "required" : [
+        "id",
+        "camara_id",
+        "description",
+        "aperture",
+        "exposure",
+        "iso",
+        "shutter_speed",
+        "color_space",
+        "focal_length",
+        "took_at",
+        "settings",
+        "created_at",
+        "updated_at"
+      ],
+      "properties": {
+        "id" : { "type" : "integer" },
+        "camara_id" : { "type" : ["integer","null"] },
+        "description" : { "type" : "string" },
+        "aperture" : { "type" : ["string","null"] },
+        "exposure" : { "type" : ["string","null"] },
+        "iso": { "type": ["integer","null"] },
+        "shutter_speed": { "type": ["string","null"] },
+        "color_space": { "type": ["string","null"] },
+        "focal_length": { "type": ["integer","null"] },
+        "took_at": { "type": ["string","null"] },
+        "settings": { "type": ["string","null"] },
+        "created_at" : { "type" : "string", "format": "date-time" },
+        "updated_at" : { "type" : "string", "format": "date-time" }
+      }
+    }
+  }
+}

@@ -9,6 +9,10 @@ FactoryGirl.define do
 		color_space "MyString"
 		focal_length 1
 		took_at "2015-09-06 21:11:26"
-  end
 
+	  factory :invalid_photo do
+			description nil
+	  end
+
+  end
 end

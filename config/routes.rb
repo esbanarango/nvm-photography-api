@@ -8,6 +8,9 @@ Rails.application.routes.draw do
       devise_scope :user do
         post 'login', to: 'sessions#create', as: :session
       end
+
+      resources :photos, except: [:edit, :new]
+
     end
   end
 
