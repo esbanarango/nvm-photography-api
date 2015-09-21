@@ -23,6 +23,8 @@
 
 class Photo < ActiveRecord::Base
 
+  include Responses::Photo
+
   # Validations
   validates :description, presence: true
 
