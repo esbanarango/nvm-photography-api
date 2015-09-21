@@ -34,6 +34,13 @@ module NvmPhotographyApi
       g.fixture_replacement :factory_girl, dir: "spec/factories"
     end
 
+    config.autoload_paths += Dir[
+        Rails.root.join('app', 'models', '{**}'),
+        Rails.root.join('app', 'mailers', '{**}'),
+        Rails.root.join('app', 'controllers', '{**}'),
+        Rails.root.join('app', 'responses', '{**}')
+    ]
+
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration should go into files in config/initializers
     # -- all .rb files in that directory are automatically loaded.
