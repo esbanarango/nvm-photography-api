@@ -15,7 +15,7 @@ gem 'acts_as_api', '~> 0.4.2'
 gem 'kaminari', '~> 0.16.3'
 gem 'swagger-docs'
 gem 'grape-swagger-rails'
-gem 'newrelic_rpm'
+gem 'acts-as-taggable-on', '~> 3.4'
 group :production, :staging do
   gem 'puma'
   gem 'rails_12factor'

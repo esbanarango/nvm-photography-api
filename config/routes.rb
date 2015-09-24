@@ -9,6 +9,8 @@ Rails.application.routes.draw do
         post 'login', to: 'sessions#create', as: :session
       end
 
+      resources :tags, only: [:index]
+
       resources :photos, except: [:edit, :new]
 
     end
