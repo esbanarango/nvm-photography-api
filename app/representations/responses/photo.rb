@@ -16,6 +16,7 @@ module Responses::Photo
       t.add :focal_length
       t.add :took_at
       t.add :settings
+      t.add :tag_list
       t.add :created_at
       t.add :updated_at
     end

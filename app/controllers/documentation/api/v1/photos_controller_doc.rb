@@ -12,6 +12,7 @@ module Documentation::API::V1::PhotosControllerDoc
       api.param :form, 'photo[shutter_speed]', :string, :optional, 'Shutter speed'
       api.param :form, 'photo[color_space]', :boolean, :optional, 'Color space'
       api.param :form, 'photo[focal_length]', :datetime, :optional, 'Focal length'
+      api.param :form, 'photo[tag_list]', :string, :optional, 'Tags (comma separated)'
     end
 
   end

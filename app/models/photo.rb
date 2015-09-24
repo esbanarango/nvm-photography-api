@@ -25,6 +25,8 @@ class Photo < ActiveRecord::Base
 
   include Responses::Photo
 
+  acts_as_taggable
+
   # Validations
   validates :description, presence: true
 

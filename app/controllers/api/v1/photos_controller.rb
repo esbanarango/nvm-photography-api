@@ -45,7 +45,7 @@ class API::V1::PhotosController < API::V1::BaseController
   # Never trust parameters from the scary internet, only allow the white list through.
   def photo_params
     params.require(:photo).permit(:camara_id, :description, :aperture, :exposure, :iso,
-      :shutter_speed, :color_space, :focal_length, :took_at, :settings)
+      :shutter_speed, :color_space, :focal_length, :took_at, :settings, tag_list: [])
   end
 
 end

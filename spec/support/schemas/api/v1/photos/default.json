@@ -16,6 +16,7 @@
         "focal_length",
         "took_at",
         "settings",
+        "tag_list",
         "created_at",
         "updated_at"
       ],
@@ -31,6 +32,7 @@
         "focal_length": { "type": ["integer","null"] },
         "took_at": { "type": ["string","null"] },
         "settings": { "type": ["string","null"] },
+        "tag_list" : { "type" : "array" },
         "created_at" : { "type" : "string", "format": "date-time" },
         "updated_at" : { "type" : "string", "format": "date-time" }
       }
