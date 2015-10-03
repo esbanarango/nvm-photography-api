@@ -37,6 +37,7 @@ rerun.txt
 pickle-email-*.html
 .zeus.sock
 /sandi_meter
+/spec/test_files/photos/*
 
 # Ignore Swagger JSON files.
 /public/apidocs/

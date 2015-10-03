@@ -53,4 +53,12 @@ RSpec.configure do |config|
   # The different available types are documented in the features, such as in
   # https://relishapp.com/rspec/rspec-rails/docs
   config.infer_spec_type_from_file_location!
+
+  config.after(:all) do
+    # Get rid of the linked images
+    if Rails.env.test?
+      FileUtils.rm_rf(Dir["#{Rails.root}/spec/test_files/photos"])
+    end
+  end
+
 end
