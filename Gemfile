@@ -16,6 +16,8 @@ gem 'kaminari', '~> 0.16.3'
 gem 'swagger-docs'
 gem 'grape-swagger-rails'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'paperclip-dropbox', '~> 1.3.2'
+
 group :production, :staging do
   gem 'puma'
   gem 'rails_12factor'
