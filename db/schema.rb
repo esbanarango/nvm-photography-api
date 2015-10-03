@@ -33,12 +33,12 @@ ActiveRecord::Schema.define(version: 20151003012121) do
     t.integer  "focal_length"
     t.datetime "took_at"
     t.text     "settings"
-    t.datetime "created_at",              null: false
-    t.datetime "updated_at",              null: false
-    t.string   "attachment_file_name"
-    t.string   "attachment_content_type"
-    t.integer  "attachment_file_size"
-    t.datetime "attachment_updated_at"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "photos", ["camara_id"], name: "index_photos_on_camara_id", using: :btree

@@ -84,7 +84,7 @@ describe API::V1::PhotosController do
     end
 
     describe "GET#show" do
-      it 'returns the requested ink color' do
+      it 'returns the requested photo' do
         get :show, id: photo
         expect(response).to be_success
         expect(response).to match_response_schema('v1/photos/default')
@@ -92,7 +92,7 @@ describe API::V1::PhotosController do
     end
 
     describe 'POST#create' do
-      it 'doesn\'t create a new ink color' do
+      it 'doesn\'t create a new photo' do
         expect {
           post :create, photo: attributes_for(:photo)
         }.to_not change(Photo, :count)
@@ -116,7 +116,7 @@ describe API::V1::PhotosController do
     end
 
     describe 'DELETE#destroy' do
-      it 'doesn\'t destroy the requested ink color' do
+      it 'doesn\'t destroy the requested photo' do
         expect {
           delete :destroy, id: photo
         }.to_not change(Photo, :count)
@@ -139,13 +139,13 @@ describe API::V1::PhotosController do
     describe "POST#create" do
 
       context 'with valid params' do
-        it 'creates a new ink color' do
+        it 'creates a new photo' do
           expect {
             post :create, photo: attributes_for(:photo)
           }.to change(Photo, :count).by(1)
         end
 
-        it "returns the created ink color" do
+        it "returns the created photo" do
           post :create, photo: attributes_for(:photo)
           expect(response).to be_success
           expect(response).to match_response_schema('v1/photos/default')
@@ -155,7 +155,7 @@ describe API::V1::PhotosController do
 
 
       context 'with invalid params' do
-        it 'doesn\'t create a new ink color' do
+        it 'doesn\'t create a new photo' do
           expect {
             post :create, photo: attributes_for(:invalid_photo)
           }.to change(Photo, :count).by(0)
@@ -177,7 +177,7 @@ describe API::V1::PhotosController do
       context 'with valid params' do
         let(:valid_params_to_update) {{exposure: 'fsdf'}}
         it 'updates the photo' do
-          # Assuming there are no other ink colors in the database, this
+          # Assuming there are no other photos in the database, this
           # specifies that the Photo created on the previous line
           # receives the :update_attributes message with whatever params are
           # submitted in the request.
@@ -200,7 +200,7 @@ describe API::V1::PhotosController do
     end
 
     describe 'DELETE#destroy' do
-      it 'destroys the requested ink color' do
+      it 'destroys the requested photo' do
         expect {
           delete :destroy, id: photo
         }.to change(Photo, :count).by(-1)

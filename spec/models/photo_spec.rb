@@ -8,6 +8,10 @@ RSpec.describe Photo, type: :model do
     end
 
     it { is_expected.to validate_presence_of(:description) }
+    it { is_expected.to validate_presence_of(:image) }
+  	it { is_expected.to validate_attachment_content_type(:image).
+  												allowing('image/png', 'image/gif', 'image/jpeg').
+                					rejecting('text/plain', 'text/xml') }
 
     describe 'Relations' do
       it { is_expected.to belong_to(:camara) }
