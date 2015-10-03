@@ -26,6 +26,11 @@ Getting Started
 
 Documentation and Support
 -------------------------
+#### API Documentation
+
+Before checking the documentation you need to run `$ rake swagger:docs` locally.
+
+Got to `http://lvh.me:3000/documentation`
 
 Issues
 -------------
