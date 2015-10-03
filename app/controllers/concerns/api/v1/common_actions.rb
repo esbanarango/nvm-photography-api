@@ -10,11 +10,6 @@ module API::V1::CommonActions
   def respond_with_array(active_model, options = {})
     options = {api_template: :default, sorted_model: active_model}.merge(options)
 
-    if request.format.csv?
-      options[:api_template] = nil
-      params[:per_page] = 'all'
-    end
-
     @active_model_instance = apply_options(active_model, options)
     @active_model_instance = @active_model_instance.order(sort_order(options[:sorted_model], options[:sorting_default]))
     @active_model_instance = @active_model_instance.page(params[:page]).per(per_page)
