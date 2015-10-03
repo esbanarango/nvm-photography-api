@@ -17,6 +17,7 @@ module Responses::Photo
       t.add :took_at
       t.add :settings
       t.add :tag_list
+      t.add -> (photo) { photo.image.file? ? photo.image.url(:original, false) : '' }, as: :image_url
       t.add :created_at
       t.add :updated_at
     end

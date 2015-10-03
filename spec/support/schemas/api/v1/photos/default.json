@@ -17,6 +17,7 @@
         "took_at",
         "settings",
         "tag_list",
+        "image_url",
         "created_at",
         "updated_at"
       ],
@@ -33,6 +34,7 @@
         "took_at": { "type": ["string","null"] },
         "settings": { "type": ["string","null"] },
         "tag_list" : { "type" : "array" },
+        "image_url" : { "type" : "string" },
         "created_at" : { "type" : "string", "format": "date-time" },
         "updated_at" : { "type" : "string", "format": "date-time" }
       }
