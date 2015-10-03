@@ -5,6 +5,11 @@ require "paperclip/matchers"
 require 'spec_helper'
 require File.expand_path('../../config/environment', __FILE__)
 require 'rspec/rails'
+
+SimpleCov.start do
+  add_filter "app/controllers/documentation/*"
+end
+
 # Add additional requires below this line. Rails is not loaded until this point!
 CodeClimate::TestReporter.start
 
