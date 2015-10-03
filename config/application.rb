@@ -9,6 +9,9 @@ Bundler.require(*Rails.groups)
 module NvmPhotographyApi
   class Application < Rails::Application
 
+    # This middleware will compress (using gzip, deflate, or another Accept-Encoding value) every response.
+    config.middleware.use Rack::Deflater
+
     config.api_only = true
 
     if defined?(Dotenv)

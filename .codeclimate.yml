@@ -37,5 +37,6 @@ ratings:
 # exclude_paths key.
 
 exclude_paths:
-- app/controllers/documentation/*
-- app/representations/responses/*
+- app/controllers/documentation/**
+- app/representations/responses/**
+- spec/**
