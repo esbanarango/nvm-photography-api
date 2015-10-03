@@ -6,6 +6,7 @@ module Documentation::API::V1::PhotosControllerDoc
     def add_common_params(api, action = :create )
       bond = (action == :create) ? :required : :optional
       api.param :form, 'photo[description]', :string, bond, 'Description'
+      api.param :form, 'photo[image]', :file, bond, 'Image file'
       api.param :form, 'photo[aperture]', :string, :optional, 'Aperture'
       api.param :form, 'photo[exposure]', :string, :optional, 'Exposure'
       api.param :form, 'photo[iso]', :integer, :optional, 'ISO'
