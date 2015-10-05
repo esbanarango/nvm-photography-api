@@ -32,7 +32,7 @@ class Photo < ActiveRecord::Base
   acts_as_taggable
 
 	# Paperclip
-  has_attached_file :image, styles: { thumb: '100x100', small: '250x250', medium: '300x300' }
+  has_attached_file :image, styles: { small: '250x250', medium: '300x300' }
 
   # Validations
   validates :description, :image, presence: true
