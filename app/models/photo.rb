@@ -19,10 +19,12 @@
 #  image_content_type :string
 #  image_file_size    :integer
 #  image_updated_at   :datetime
+#  location_id        :integer
 #
 # Indexes
 #
-#  index_photos_on_camara_id  (camara_id)
+#  index_photos_on_camara_id    (camara_id)
+#  index_photos_on_location_id  (location_id)
 #
 
 class Photo < ActiveRecord::Base
@@ -40,4 +42,5 @@ class Photo < ActiveRecord::Base
 
 	# Relations
   belongs_to :camara
+  belongs_to :location, counter_cache: true
 end

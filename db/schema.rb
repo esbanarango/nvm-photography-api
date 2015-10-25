@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151003012121) do
+ActiveRecord::Schema.define(version: 20151025005002) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,6 +20,15 @@ ActiveRecord::Schema.define(version: 20151003012121) do
     t.string   "model"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "locations", force: :cascade do |t|
+    t.string   "country"
+    t.string   "country_code"
+    t.string   "city"
+    t.integer  "photos_count", default: 0, null: false
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "photos", force: :cascade do |t|
@@ -39,9 +48,11 @@ ActiveRecord::Schema.define(version: 20151003012121) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.integer  "location_id"
   end
 
   add_index "photos", ["camara_id"], name: "index_photos_on_camara_id", using: :btree
+  add_index "photos", ["location_id"], name: "index_photos_on_location_id", using: :btree
 
   create_table "sessions", force: :cascade do |t|
     t.integer  "user_id"
@@ -96,5 +107,6 @@ ActiveRecord::Schema.define(version: 20151003012121) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
   add_foreign_key "photos", "camaras"
+  add_foreign_key "photos", "locations"
   add_foreign_key "sessions", "users"
 end

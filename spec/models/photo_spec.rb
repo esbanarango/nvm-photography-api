@@ -15,6 +15,7 @@ RSpec.describe Photo, type: :model do
 
     describe 'Relations' do
       it { is_expected.to belong_to(:camara) }
+      it { is_expected.to belong_to(:location).counter_cache(true) }
     end
   end
 end
